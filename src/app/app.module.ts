@@ -6,20 +6,54 @@ import { NavbarComponent } from './layout/navbar/navbar.component';
 import { MainComponent } from './main/main.component';
 import {HttpClientModule} from "@angular/common/http";
 import {RegistrationComponent} from "./auth/registration/registration.component";
-import {ReactiveFormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { MatSidenavModule } from '@angular/material/sidenav';
+import {LoginComponent} from "./auth/login/login.component";
+import {CommonModule} from "@angular/common";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {MatButtonModule} from "@angular/material/button";
+import {MatIconModule} from "@angular/material/icon";
+import {LayoutModule} from "@angular/cdk/layout";
+import {MatToolbarModule} from "@angular/material/toolbar";
+import {RouterModule} from "@angular/router";
+import {MatCardModule} from "@angular/material/card";
+import {MatGridListModule} from "@angular/material/grid-list";
+import {MatMenuModule} from "@angular/material/menu";
+import {MatListModule} from "@angular/material/list";
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     MainComponent,
-    RegistrationComponent
+    RegistrationComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatSidenavModule,
+    BrowserModule,
+    CommonModule,
+    BrowserAnimationsModule,
+    FormsModule,
+    LayoutModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule,
+    ReactiveFormsModule,
+    RouterModule,
+    MatGridListModule,
+    MatCardModule,
+    MatMenuModule,
+    AppRoutingModule,
+    MatIconModule,
+    // RecaptchaModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
