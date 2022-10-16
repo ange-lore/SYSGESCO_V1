@@ -20,6 +20,7 @@ import {MatCardModule} from "@angular/material/card";
 import {MatGridListModule} from "@angular/material/grid-list";
 import {MatMenuModule} from "@angular/material/menu";
 import {MatListModule} from "@angular/material/list";
+import { MaterialModule } from './material/material.module';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import {MatListModule} from "@angular/material/list";
     AppRoutingModule,
     MatIconModule,
     // RecaptchaModule,
-    HttpClientModule
+    HttpClientModule,
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
