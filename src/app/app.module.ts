@@ -25,6 +25,7 @@ import { SolvabiliteComponent } from './comptabilite/solvabilite/solvabilite.com
 import { ListePaiementComponent } from './comptabilite/liste-paiement/liste-paiement.component';
 import { CandidatComponent } from './concours/candidat/candidat.component';
 import { PaiementComponent } from './concours/paiement/paiement.component';
+import { ResultatComponent } from './concours/resultat/resultat.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { PaiementComponent } from './concours/paiement/paiement.component';
     ListePaiementComponent,
     CandidatComponent,
     PaiementComponent,
+    ResultatComponent,
   ],
   imports: [
     BrowserModule,

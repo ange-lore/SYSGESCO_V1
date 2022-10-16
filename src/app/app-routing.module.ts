@@ -11,6 +11,7 @@ import { SolvabiliteComponent } from './comptabilite/solvabilite/solvabilite.com
 import { ListePaiementComponent } from './comptabilite/liste-paiement/liste-paiement.component';
 import { PaiementComponent } from './concours/paiement/paiement.component';
 import { CandidatComponent } from './concours/candidat/candidat.component';
+import { ResultatComponent } from './concours/resultat/resultat.component';
 
 const routes: Routes = [
   {path: '', component: MainComponent, pathMatch: 'full'},
@@ -19,6 +20,7 @@ const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'paiement', component: PaiementComponent},
   {path: 'candidat', component: CandidatComponent},
+  {path: 'resultat', component: ResultatComponent},
   {path: 'dashboard-nav', component: NavComponent,
     children: [
       {path: '', redirectTo: '/dashboard-nav', pathMatch: 'full'},
