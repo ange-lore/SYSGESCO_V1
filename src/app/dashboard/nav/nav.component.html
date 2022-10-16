@@ -1,8 +1,9 @@
-<mat-sidenav-container class="sidenav-container">
+<mat-sidenav-container
+  class="sidenav-container">
   <mat-sidenav #drawer class="sidenav" fixedInViewport
-      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
-      [mode]="(isHandset$ | async) ? 'over' : 'side'"
-      [opened]="(isHandset$ | async) === false">
+               [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+               [mode]="(isHandset$ | async) ? 'over' : 'side'"
+               [opened]="(isHandset$ | async) === false">
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
       <a mat-list-item routerLink="">Home</a>
@@ -18,17 +19,15 @@
         <i class="bi bi-camera-video"></i>
         <h3>Vidéo conférence</h3>
       </a>
-      <div class="drop">
-      <!-- ------------------------------BUTTON Comptabilite ---------------------------------- -->
-      <div class="dropdown">
-        <button class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" class="dropbtn"><i class="bi bi-credit-card-2-back"></i>Comptabilité</button>
+      <a class="dropdown" mat-list-item>
+        <i class="bi bi-credit-card-2-back"></i>
+        <h3>Comptabilité</h3>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
           <a class="dropdown-item" mat-list-item routerLink="liste-paiement">
             <i class="bi bi-list-check"></i>
             <h3>Liste paiement</h3>
           </a>
-          <a class="dropdown-item" mat-list-item routerLink="solvabilite">
-
+          <a mat-list-item routerLink="solvabilite">
             <i class="bi bi-cash"></i>
             <h3>Solvabilite</h3>
           </a>
@@ -37,9 +36,12 @@
             <h3>Statistique</h3>
           </a>
         </div>
-      </div> <br>
-
-      <!-- -------------------------------BUTTON SCOLARITE -------------------------------------- -->
+      </a>
+      <div class="dropdown">
+        <a class="nav-link dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+          <i class="bi bi-credit-card-2-back">
+          </i>Comptabilité</a>
+      </div>
       <div class="dropdown">
         <button class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" class="dropbtn"><i class="bi bi-easel2"></i>Scolarité</button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -74,7 +76,7 @@
       <!--+++++++++++++++++++++++++++++++++++++++++++++++++ COMPTABILITE  +++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
 
       <div class="dropdown">
-        
+
         <button class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" class="dropbtn"><i class="bi bi-person-circle"></i>REP</button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
           <a class="dropdown-item" mat-list-item [routerLink]="['/Liste']">
@@ -95,7 +97,6 @@
           </a>
         </div>
       </div>
-    </div>
       <a mat-list-item [routerLink]="['']">
         <img src="/assets/image/logout.png" alt="">
         <h3>Déconnection</h3>
