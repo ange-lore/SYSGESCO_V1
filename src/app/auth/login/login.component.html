@@ -1,2 +1,48 @@
 <app-navbar></app-navbar>
-<p>login works!</p>
+<div class="container" id="container">
+	<div class="forms-container">
+		<div class="form-container sign-in-container">
+
+			<form action="#" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+				<h1>Connexion</h1>
+				<span>Connectez vous avec vos données personnelles</span>
+				<div class="form-group">
+					<input type="text" placeholder="Email" formControlName="email"
+						[ngClass]="{'is-invalid': submitted  && loginForm.controls['email'].errors }"
+						class="form-control" />
+					<div *ngIf="submitted && loginForm.controls['email'].errors" class="text-danger">
+						<div *ngIf="loginForm.controls['email'].errors['required']">Entrez votre nom d'utilisateur</div>
+						<div *ngIf="loginForm.controls['email'].errors['email']">Le noms doit être un noms e-mail
+							valide</div>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<input type="password" placeholder="Mot de passe" formControlName="mdp"
+						[ngClass]="{'is-invalid': submitted  && loginForm.controls['mdp'].errors }"
+						class="form-control" />
+					<div *ngIf="submitted && loginForm.controls['mdp'].errors" class="text-danger">
+						<div *ngIf="loginForm.controls['mdp'].errors['required']">Entrez votre mot de passe</div>
+						<div *ngIf="loginForm.controls['mdp'].errors['minlength']">Le mot de passe doit avoir au moins 4
+							caractères</div>
+					</div>
+					<span class="eye" onclick="myEye()">
+					</span>
+
+				</div>
+
+				<button>Connexion</button>
+			</form>
+		</div>
+		<div class="overlay-container">
+			<div class="overlay">
+				<div class="overlay-panel overlay-right">
+					<h1>Bienvenue</h1>
+					<p>Entrez vos données personnelles et commencez votre journée avec nous</p>
+					<button class="ghost" id="signUp" routerLink="/registration">S'inscrire</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+

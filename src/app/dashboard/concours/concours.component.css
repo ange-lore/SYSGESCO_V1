@@ -1,0 +1,18 @@
+body{
+    margin-top:20px;
+    background:#f8f8f8
+}
+
+
+
+button.btn.btn-success{
+    font-size: 1.75rem;
+}
+
+button.btn.btn-sm  {
+    color: black;
+}
+
+button.btn.btn-success {
+    font-size: 1.5rem;
+}

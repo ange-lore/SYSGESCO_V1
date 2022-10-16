@@ -14,12 +14,14 @@ import {MatCardModule} from "@angular/material/card";
 import {MatMenuModule} from "@angular/material/menu";
 import {NavComponent} from "./nav/nav.component";
 import { VideoConferenceComponent } from './video-conference/video-conference.component';
+import { ConcoursComponent } from './concours/concours.component';
 
 @NgModule({
   declarations: [
     NavComponent,
     DashComponent,
-    VideoConferenceComponent
+    VideoConferenceComponent,
+    ConcoursComponent
   ],
   imports: [
     BrowserModule,

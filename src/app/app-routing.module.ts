@@ -6,6 +6,7 @@ import {LoginComponent} from "./auth/login/login.component";
 import {NavComponent} from "./dashboard/nav/nav.component";
 import {DashComponent} from "./dashboard/dash/dash.component";
 import {VideoConferenceComponent} from "./dashboard/video-conference/video-conference.component";
+import { ConcoursComponent } from './dashboard/concours/concours.component';
 
 const routes: Routes = [
   {path: '', component: MainComponent, pathMatch: 'full'},
@@ -18,6 +19,7 @@ const routes: Routes = [
       {path: '', title: 'Main Component',  component: DashComponent},
       {path: 'dashboard-nav', component: DashComponent},
       // {path: 'admin-settings', title: 'Main Component',  component: AdminSettingComponent},
+      {path: 'concours', title: 'liste candidat',  component: ConcoursComponent},
       {path: 'video-conference', title: 'Video Component',  component: VideoConferenceComponent},
       { path: 'dashboard-nav', loadChildren: () => import ('./dashboard/dashboard.module').then(m => m.DashboardModule)},
     ]
