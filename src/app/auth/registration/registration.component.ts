@@ -25,21 +25,26 @@ export class RegistrationComponent implements OnInit {
   save(){
     this.submitted = true;
 
-    if (this.registerForm.invalid){
+    if (
+      this.registerForm.invalid || !this.registerForm.getRawValue().email.invalid){
       alert('veillez bien remplir les champs')
     }else{
-      this.auth.register(
-        this.registerForm.getRawValue().nom,
-        this.registerForm.getRawValue().prenom,
-        this.registerForm.getRawValue().email,
-        this.registerForm.getRawValue().mdp
-      )
-        .subscribe(res =>{
-          alert("User Successfully Register. ");
-          this.router.navigate(['/login'])
-        },error =>{
-          console.log("error");
-        });
+      alert('OK')
+
     }
+    // else{
+    //   this.auth.register(
+    //     this.registerForm.getRawValue().nom,
+    //     this.registerForm.getRawValue().prenom,
+    //     this.registerForm.getRawValue().email,
+    //     this.registerForm.getRawValue().mdp
+    //   )
+    //     .subscribe(res =>{
+    //       alert("User Successfully Register. ");
+    //       this.router.navigate(['/login'])
+    //     },error =>{
+    //       console.log("error");
+    //     });
+    // }
   }
 }
