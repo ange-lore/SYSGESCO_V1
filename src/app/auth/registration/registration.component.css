@@ -1,32 +1,10 @@
-/* @import '-bootstrap/dist/css/bootstrap.min.css'; */
-@import '~bootstrap/dist/css/bootstrap.min.css';
-
-* {
-  box-sizing: border-box;
-}
-
-/* .ng-valid[required], .ng-valid.required  {
-	border-left: 1px solid #5378b8;
-
-  }
-
-  .ng-invalid:not(form)  {
-	border-left: 1px solid #a94442;
-	padding: 0.5px;
-  } */
-
-/* input.form-control.ng-pristine{
-	background-color: #ced4da;
-
-} */
-
 .form-control{
   background-color: #eee;
 }
 
 input.form-control{
-  width: 240px;
-  height: 40px;
+  width: 300px;
+  height: 10px;
 }
 
 ::placeholder{
@@ -74,12 +52,13 @@ a {
 }
 
 button {
-  border-radius: 20px;
+  border-radius: 10px;
   border: 1px solid #0000FF;
   background-color: #0000FF;
   color: #FFFFFF;
   font-size: 12px;
   font-weight: bold;
+  margin: 20px;
   padding: 12px 45px;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -114,7 +93,7 @@ input {
   background-color: #eee;
   border: none;
   padding: 2rem 25px;
-  margin: 8px 0;
+  margin: 3px 0;
   /* width: 100%; */
 }
 
