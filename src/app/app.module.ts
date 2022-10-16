@@ -35,7 +35,6 @@ import {environment} from "../environments/environment";
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule,
     ReactiveFormsModule,
     MatSidenavModule,
     BrowserModule,
@@ -57,7 +56,7 @@ import {environment} from "../environments/environment";
     MatIconModule,
     // RecaptchaModule,
     HttpClientModule,
-    MaterialModule
+    MaterialModule,
     HttpClientModule,
     NgxAgoraModule.forRoot({ AppID: environment.agora.appId })
   ],
