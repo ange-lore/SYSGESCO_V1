@@ -20,6 +20,7 @@ import {MatCardModule} from "@angular/material/card";
 import {MatGridListModule} from "@angular/material/grid-list";
 import {MatMenuModule} from "@angular/material/menu";
 import {MatListModule} from "@angular/material/list";
+import { MaterialModule } from './material/material.module';
 import {NgxAgoraModule, NgxAgoraService} from "ngx-agora";
 import {environment} from "../environments/environment";
 
@@ -55,6 +56,8 @@ import {environment} from "../environments/environment";
     AppRoutingModule,
     MatIconModule,
     // RecaptchaModule,
+    HttpClientModule,
+    MaterialModule
     HttpClientModule,
     NgxAgoraModule.forRoot({ AppID: environment.agora.appId })
   ],

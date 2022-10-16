@@ -1,115 +1,109 @@
 <mat-sidenav-container class="sidenav-container">
-  <mat-sidenav
-    #drawer class="sidenav" fixedInViewport
-    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
-    [mode]="(isHandset$ | async) ? 'over' : 'side'"
-    [opened]="(isHandset$ | async) === false">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false">
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
       <a mat-list-item routerLink="">Home</a>
-      <a mat-list-item routerLink="/dashboard-nav"> <a>Home Dashboard</a></a>
-      <a mat-list-item ><a>Emploi_temps</a></a>
-      <i class="bi bi-box-fill"></i>
-      <a class="dropdown-item" mat-list-item >
-        <i class="bi bi-camera-video"></i>
-        <a routerLink="video-conference">Vidéo conférence</a>
+      <a mat-list-item routerLink="dashboard-nav">
+        <img src="/assets/image/dashboard.png" alt="">
+        <h3>Home Dashboard</h3>
       </a>
+      <a mat-list-item [routerLink]="['/Emploi_temps']">
+        <img src="/assets/image/deadline.png" alt="">
+        <h3>Emploi_temps</h3>
+      </a>
+      <a class="dropdown-item" mat-list-item [routerLink]="['/web-video']">
+        <i class="bi bi-camera-video"></i>
+        <h3>Vidéo conférence</h3>
+      </a>
+      <div class="drop">
+      <!-- ------------------------------BUTTON Comptabilite ---------------------------------- -->
       <div class="dropdown">
-        <div class=" dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-          <i class="bi bi-box-fill"></i>Comptabilité
-        </div>
-        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-          <li><a class="dropdown-item" href="#">Liste paiemen</a></li>
-          <li><a class="dropdown-item" href="#">Solvabilite</a></li>
-          <li><a class="dropdown-item" href="#">Statistique</a></li>
-        </ul>
-      </div>
-<!--      <div class="drop">-->
-<!--        <div class="dropdown">-->
-<!--          <div class="dropbtn">-->
-<!--            <i class="bi bi-credit-card-2-back"></i>Comptabilité</div>-->
-<!--          <div class="dropdown-content">-->
-<!--            <a mat-list-item [routerLink]="['/listepaiement']">-->
-<!--              <i class="bi bi-list-check"></i>-->
-<!--              &lt;!&ndash; <img src="/assets/image/deadline.png" alt=""> &ndash;&gt;-->
-<!--              <a>Liste paiement</a>-->
-<!--            </a>-->
-<!--            <a mat-list-item >-->
-<!--              <i class="bi bi-cash"></i>-->
-<!--              <a>Solvabilite</a>-->
-<!--            </a>-->
-<!--            <a mat-list-item [routerLink]="['/Liste']">-->
-<!--              <i class="bi bi-bar-chart-fill"></i>-->
-<!--              <a>Statistique</a>-->
-<!--            </a>-->
-<!--          </div>-->
-<!--        </div>-->
-<!--        <br>-->
-<!--        <div class="dropdown">-->
-<!--          <div class="dropbtn"><i class="bi bi-easel2"></i>Scolarité</div>-->
-<!--          <div class="dropdown-content">-->
-<!--            <a mat-list-item [routerLink]="['/concours']">-->
-<!--              <i class="bi bi-pencil-square"></i>-->
-<!--              <a>Concours</a>-->
-<!--            </a>-->
-<!--            <a mat-list-item [routerLink]="['/Emploi_temps']">-->
-<!--              <i class="bi bi-graph-up-arrow"></i>-->
-<!--              <a>Niveau</a>-->
-<!--            </a>-->
-<!--            <a mat-list-item [routerLink]="['/Emploi_temps']">-->
-<!--              <i class="bi bi-person-rolodex"></i>-->
-<!--              <h3>Classe</h3>-->
-<!--            </a>-->
-<!--            <a mat-list-item [routerLink]="['/Emploi_temps']">-->
-<!--              &lt;!&ndash; <img src="/assets/image/deadline.png" alt=""> &ndash;&gt;-->
-<!--              <a>Présence</a>-->
-<!--            </a>-->
-<!--            <a mat-list-item [routerLink]="['/solvabilite']">-->
-<!--              <i class="bi bi-cash"></i>-->
-<!--              &lt;!&ndash; <img src="/assets/image/deadline.png" alt=""> &ndash;&gt;-->
-<!--              <a>Solvabilite</a>-->
-<!--            </a>-->
-<!--            <a mat-list-item [routerLink]="['/Certificat']">-->
-<!--              &lt;!&ndash;            <img src="/assets/image/school-certificate.png" alt="">&ndash;&gt;-->
-<!--              <a>Certificat</a>-->
-<!--            </a>-->
-<!--          </div>-->
-<!--        </div> <br>-->
-<!--        <div class="dropdown">-->
-<!--          <div class="dropbtn"><i class="bi bi-person-circle"></i>REP</div>-->
-<!--          <div class="dropdown-content">-->
-<!--            <a mat-list-item [routerLink]="['/Liste']">-->
-<!--              <i class="bi bi-person-bounding-box"></i>-->
-<!--              &lt;!&ndash; <img src="/assets/image/customer.png" alt=""> &ndash;&gt;-->
-<!--              <h3>Personnel</h3>-->
-<!--            </a>-->
-<!--            <a mat-list-item [routerLink]="['/Liste']">-->
-<!--              <i class="bi bi-person-badge"></i>-->
-<!--              &lt;!&ndash; <img src="/assets/image/customer.png" alt=""> &ndash;&gt;-->
-<!--              <h3>Staff</h3>-->
-<!--            </a>-->
-<!--            <a mat-list-item [routerLink]="['/Liste']">-->
-<!--              <i class="bi bi-ui-radios"></i>-->
-<!--              &lt;!&ndash; <img src="/assets/image/customer.png" alt=""> &ndash;&gt;-->
-<!--              <h3>Filiere</h3>-->
-<!--            </a>-->
-<!--            <a mat-list-item [routerLink]="['/Liste']">-->
-<!--              <i class="bi bi-bar-chart-fill"></i>-->
-<!--              &lt;!&ndash; <img src="/assets/image/customer.png" alt=""> &ndash;&gt;-->
-<!--              <a>Statistique</a>-->
-<!--            </a>-->
-<!--          </div>-->
-<!--        </div>-->
-<!--      </div>-->
+        <button class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" class="dropbtn"><i class="bi bi-credit-card-2-back"></i>Comptabilité</button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" mat-list-item [routerLink]="['/listepaiement']">
+            <i class="bi bi-list-check"></i>
+            <h3>Liste paiement</h3>
+          </a>
+          <a class="dropdown-item" mat-list-item [routerLink]="['/solvabilite']">
 
+            <i class="bi bi-cash"></i>
+            <h3>Solvabilite</h3>
+          </a>
+          <a class="dropdown-item" mat-list-item [routerLink]="['/Liste']">
+            <i class="bi bi-bar-chart-fill"></i>
+            <h3>Statistique</h3>
+          </a>
+        </div>
+      </div> <br>
+
+      <!-- -------------------------------BUTTON SCOLARITE -------------------------------------- -->
+      <div class="dropdown">
+        <button class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" class="dropbtn"><i class="bi bi-easel2"></i>Scolarité</button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a mat-list-item [routerLink]="['/concours']">
+            <i class="bi bi-pencil-square"></i>
+            <h3>Concours</h3>
+          </a>
+          <a class="dropdown-item" mat-list-item [routerLink]="['/Emploi_temps']">
+            <i class="bi bi-graph-up-arrow"></i>
+            <h3>Niveau</h3>
+          </a>
+          <a class="dropdown-item" mat-list-item [routerLink]="['/Emploi_temps']">
+            <i class="bi bi-person-rolodex"></i>
+            <h3>Classe</h3>
+          </a>
+          <a mat-list-item [routerLink]="['/Emploi_temps']">
+            <i class="bi bi-file-ppt"></i>
+            <h3>Présence</h3>
+          </a>
+          <a class="dropdown-item" mat-list-item [routerLink]="['/solvabilite']">
+            <i class="bi bi-cash"></i>
+            <h3>Solvabilite</h3>
+          </a>
+          <a class="dropdown-item" mat-list-item [routerLink]="['/Certificat']">
+            <img src="/assets/image/school-certificate.png" alt="">
+            <h3>Certificat</h3>
+          </a>
+        </div>
+      </div> <br>
+      <!-- <button routerLink="admin-settings">scolarite-setting</button> -->
+
+      <!--+++++++++++++++++++++++++++++++++++++++++++++++++ COMPTABILITE  +++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+
+      <div class="dropdown">
+        
+        <button class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" class="dropbtn"><i class="bi bi-person-circle"></i>REP</button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" mat-list-item [routerLink]="['/Liste']">
+            <i class="bi bi-person-bounding-box"></i>
+            <h3>Personnel</h3>
+          </a>
+          <a class="dropdown-item" mat-list-item [routerLink]="['/Liste']">
+            <i class="bi bi-person-badge"></i>
+            <h3>Staff</h3>
+          </a>
+          <a  class="dropdown-item" mat-list-item [routerLink]="['/Liste']">
+            <i class="bi bi-ui-radios"></i>
+            <h3>Filiere</h3>
+          </a>
+          <a class="dropdown-item" mat-list-item [routerLink]="['/Liste']">
+            <i class="bi bi-bar-chart-fill"></i>
+            <h3>Statistique</h3>
+          </a>
+        </div>
+      </div>
+    </div>
       <a mat-list-item [routerLink]="['']">
-        <!--        <img src="/assets/image/logout.png" alt="">-->
-        <a>Déconnection</a>
+        <img src="/assets/image/logout.png" alt="">
+        <h3>Déconnection</h3>
       </a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <mat-toolbar color="primary">
+    <mat-toolbar>
       <button
         type="button"
         aria-label="Toggle sidenav"
@@ -118,9 +112,10 @@
         *ngIf="isHandset$ | async">
         <mat-icon  routerLink="" aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span>SYSGESGO</span>
+      <span>SYSGESCO</span>
     </mat-toolbar>
     <!-- Add Content Here -->
     <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>
+
