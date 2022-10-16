@@ -4,8 +4,10 @@
 
 export const environment = {
   production: false,
-  apiBaseUrl : 'http://localhost:8080'
-
+  apiBaseUrl : 'http://localhost:8080',
+  agora: {
+    appId: '414cf5700afe4cd38db9d8753d1c27a3'
+  }
 };
 
 /*

@@ -14,7 +14,8 @@ import {MatCardModule} from "@angular/material/card";
 import {MatMenuModule} from "@angular/material/menu";
 import {NavComponent} from "./nav/nav.component";
 import { VideoConferenceComponent } from './video-conference/video-conference.component';
-
+import {NgxAgoraModule} from "ngx-agora";
+import {environment} from "../../environments/environment";
 @NgModule({
   declarations: [
     NavComponent,
@@ -33,9 +34,9 @@ import { VideoConferenceComponent } from './video-conference/video-conference.co
     MatIconModule,
     MatGridListModule,
     MatCardModule,
-    MatMenuModule
+    MatMenuModule,
   ],
-  providers: [],
+  providers: [NgxAgoraModule],
   bootstrap: [NavComponent]
 })
 export class DashboardModule { }

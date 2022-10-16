@@ -3,6 +3,8 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
 
+import { NgxAgoraSdkNgModule } from 'ngx-agora-sdk-ng';
+
 @Component({
   selector: 'app-nav',
   templateUrl: './nav.component.html',
