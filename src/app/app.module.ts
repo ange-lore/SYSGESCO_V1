@@ -21,6 +21,8 @@ import {MatGridListModule} from "@angular/material/grid-list";
 import {MatMenuModule} from "@angular/material/menu";
 import {MatListModule} from "@angular/material/list";
 import { MaterialModule } from './material/material.module';
+import { SolvabiliteComponent } from './comptabilite/solvabilite/solvabilite.component';
+import { ListePaiementComponent } from './comptabilite/liste-paiement/liste-paiement.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +31,8 @@ import { MaterialModule } from './material/material.module';
     MainComponent,
     RegistrationComponent,
     LoginComponent,
+    SolvabiliteComponent,
+    ListePaiementComponent,
   ],
   imports: [
     BrowserModule,

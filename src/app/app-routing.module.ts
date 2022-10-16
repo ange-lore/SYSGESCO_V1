@@ -7,6 +7,8 @@ import {NavComponent} from "./dashboard/nav/nav.component";
 import {DashComponent} from "./dashboard/dash/dash.component";
 import {VideoConferenceComponent} from "./dashboard/video-conference/video-conference.component";
 import { ConcoursComponent } from './dashboard/concours/concours.component';
+import { SolvabiliteComponent } from './comptabilite/solvabilite/solvabilite.component';
+import { ListePaiementComponent } from './comptabilite/liste-paiement/liste-paiement.component';
 
 const routes: Routes = [
   {path: '', component: MainComponent, pathMatch: 'full'},
@@ -20,6 +22,8 @@ const routes: Routes = [
       {path: 'dashboard-nav', component: DashComponent},
       // {path: 'admin-settings', title: 'Main Component',  component: AdminSettingComponent},
       {path: 'concours', title: 'liste candidat',  component: ConcoursComponent},
+      {path: 'solvabilite', title: 'solvabilite',  component: SolvabiliteComponent},
+      {path: 'liste-paiement', title: 'liste paiement',  component: ListePaiementComponent},
       {path: 'video-conference', title: 'Video Component',  component: VideoConferenceComponent},
       { path: 'dashboard-nav', loadChildren: () => import ('./dashboard/dashboard.module').then(m => m.DashboardModule)},
     ]

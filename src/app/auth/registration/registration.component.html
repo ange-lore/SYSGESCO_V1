@@ -1,73 +1,69 @@
 <app-navbar></app-navbar>
 <div class="container" id="container">
-  <div class="forms-container">
-    <div class="sign-in-container">
-      <form [formGroup]="registerForm" (ngSubmit)="save()">
-        <h1>S'inscrire</h1>
-        <span>Entrez vos données personnelles</span>
-        <div class="form-group">
-          <input
-            type="text"
-            placeholder="Nom"
-            formControlName="nom"
-            [ngClass]="{'is-invalid': submitted  && registerForm.controls['nom'].errors }"
-            class="form-control" />
-          <div *ngIf="submitted && registerForm.controls['nom'].errors" class="text-danger">
-            <div *ngIf="registerForm.controls['nom'].errors['required']">Entrez votre nom</div>
-            <div *ngIf="registerForm.controls['nom'].errors['minlength']">Entrez au moins 4 caractères</div>
-          </div>
-        </div>
-        <div class="form-group">
-          <input
-            type="text"
-            placeholder="Prenom"
-            formControlName="prenom"
-                 [ngClass]="{'is-invalid': submitted  && registerForm.controls['prenom'].errors }"
-                 class="form-control" />
-          <div *ngIf="submitted && registerForm.controls['prenom'].errors" class="text-danger">
-            <div *ngIf="registerForm.controls['prenom'].errors['required']">Entrez votre prenom</div>
-            <div *ngIf="registerForm.controls['prenom'].errors['minlength']">Entrez au moins 4 caractères
-            </div>
-          </div>
-        </div>
-        <div class="form-group">
-          <input
-            type="text"
-            placeholder="Email"
-            formControlName="email"
-                 [ngClass]="{'is-invalid': submitted  && registerForm.controls['email'].errors }"
-                 class="form-control" />
-          <div *ngIf="submitted && registerForm.controls['email'].errors" class="text-danger">
-            <div *ngIf="registerForm.controls['email'].errors['required']">Entrez votre email</div>
-            <div *ngIf="registerForm.controls['email'].errors['email']">L'e-mail doit être une adresse
-              e-mail valide</div>
-          </div>
-        </div>
+	<div class="forms-container">
+		<div class="form-container sign-in-container">
+			<form [formGroup]="registerForm" (ngSubmit)="save()">
+				<h1>S'inscrire</h1>
+				<span>Entrez vos données personnelles</span>
+				<div class="form-group">
+					<input type="text" placeholder="Nom" formControlName="nom"
+						[ngClass]="{'is-invalid': submitted  && registerForm.controls['nom'].errors }"
+						class="form-control" />
+					<div *ngIf="submitted && registerForm.controls['nom'].errors" class="text-danger">
+						<div *ngIf="registerForm.controls['nom'].errors['required']">Entrez votre nom</div>
+						<div *ngIf="registerForm.controls['nom'].errors['minlength']">Entrez au moins 4 caractères</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<input type="text" placeholder="Prenom" formControlName="prenom"
+						[ngClass]="{'is-invalid': submitted  && registerForm.controls['prenom'].errors }"
+						class="form-control" />
+					<div *ngIf="submitted && registerForm.controls['prenom'].errors" class="text-danger">
+						<div *ngIf="registerForm.controls['prenom'].errors['required']">Entrez votre prenom</div>
+						<div *ngIf="registerForm.controls['prenom'].errors['minlength']">Entrez au moins 4 caractères
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<input type="text" placeholder="Email" formControlName="email"
+						[ngClass]="{'is-invalid': submitted  && registerForm.controls['email'].errors }"
+						class="form-control" />
+					<div *ngIf="submitted && registerForm.controls['email'].errors" class="text-danger">
+						<div *ngIf="registerForm.controls['email'].errors['required']">Entrez votre email</div>
+						<div *ngIf="registerForm.controls['email'].errors['email']">L'e-mail doit être une adresse
+							e-mail valide</div>
+					</div>
+				</div>
 
-        <div class="form-group">
-          <input
-            type="password"
-            placeholder="Mot de passe"
-            formControlName="mdp"
-            [ngClass]="{'is-invalid': submitted  && registerForm.controls['mdp'].errors }"
-            class="form-control" />
-          <div *ngIf="submitted && registerForm.controls['mdp'].errors" class="text-danger">
-            <div *ngIf="registerForm.controls['mdp'].errors['required']">Entrez votre mot de passe</div>
-            <div *ngIf="registerForm.controls['mdp'].errors['minlength']">Le mot de passe doit avoir au
-              moins 8 caractères</div>
-          </div>
-        </div>
-        <button>S'inscire</button>
-      </form>
-    </div>
-    <div class="overlay-container">
-      <div class="overlay">
-        <div class="overlay-panel overlay-right">
-          <h1>Bienvenue!</h1>
-          <p>Pour rester en contact avec vous, veillez vous connecter avec vos information personnelles </p>
-          <button class="ghost" id="signIn" routerLink="/login">Connexion</button>
-        </div>
-      </div>
-    </div>
-  </div>
+				<div class="form-group">
+					<input type="password" placeholder="Mot de passe" formControlName="mdp"
+						[ngClass]="{'is-invalid': submitted  && registerForm.controls['mdp'].errors }"
+						class="form-control" />
+					<div *ngIf="submitted && registerForm.controls['mdp'].errors" class="text-danger">
+						<div *ngIf="registerForm.controls['mdp'].errors['required']">Entrez votre mot de passe</div>
+						<div *ngIf="registerForm.controls['mdp'].errors['minlength']">Le mot de passe doit avoir au
+							moins 8 caractères</div>
+					</div>
+				</div>
+				<button>S'inscire</button>
+				<!-- <div class="col col-md-4">
+					<div style="position : fixe">{{ preview }}</div>
+				</div> -->
+			</form>
+		</div>
+		<div class="overlay-container">
+			<div class="overlay">
+				<div class="overlay-panel overlay-right">
+					<h1>Bienvenue!</h1>
+					<p>Pour rester en contact avec vous, veillez vous connecter avec vos information personnelles </p>
+					<button class="ghost" id="signIn" routerLink="/login">Connexion</button>
+				</div>
+			</div>
+		</div>
+
+		<!-- ++++++++++++++++++++++++++++++++ -->
+		<!-- <img src="assets/image/login.svg" class="image"> -->
+		<!-- DECOMMENTER -->
+
+	</div>
 </div>
