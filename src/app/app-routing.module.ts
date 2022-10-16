@@ -9,12 +9,16 @@ import {VideoConferenceComponent} from "./dashboard/video-conference/video-confe
 import { ConcoursComponent } from './dashboard/concours/concours.component';
 import { SolvabiliteComponent } from './comptabilite/solvabilite/solvabilite.component';
 import { ListePaiementComponent } from './comptabilite/liste-paiement/liste-paiement.component';
+import { PaiementComponent } from './concours/paiement/paiement.component';
+import { CandidatComponent } from './concours/candidat/candidat.component';
 
 const routes: Routes = [
   {path: '', component: MainComponent, pathMatch: 'full'},
   {path: 'registration', component: RegistrationComponent},
   // {path: '', redirectTo: '/registration', pathMatch: 'full'},
   {path: 'login', component: LoginComponent},
+  {path: 'paiement', component: PaiementComponent},
+  {path: 'candidat', component: CandidatComponent},
   {path: 'dashboard-nav', component: NavComponent,
     children: [
       {path: '', redirectTo: '/dashboard-nav', pathMatch: 'full'},

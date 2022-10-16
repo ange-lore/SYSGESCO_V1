@@ -1,0 +1,187 @@
+<app-navbar></app-navbar>
+
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<div class="container">
+	<div class="view-account">
+		<section class="module">
+			<div class="module-inner">
+				<div class="content-panel">
+					<h2 class="title">Paiement Carte</h2>
+					<div class="billing">
+						<div class="secure text-center margin-bottom-md">
+							<h3 class="margin-bottom-md text-success">
+								<span class="fs1 icon" aria-hidden="true" data-icon=""></span>
+								Paiement sécurisé <br>
+								<small>par carte bancaire Il s'agit d'un paiement sécurisé crypté</small>
+							</h3>
+							<div class="accepted-cards">
+								<ul class="list-inline">
+									<li><img src="https://www.uxfordev.com/demo/1.0.6/assets/images/payment-icon-set/icons/visa-curved-32px.png"
+											alt="Visa"></li>
+									<li><img src="https://www.uxfordev.com/demo/1.0.6/assets/images/payment-icon-set/icons/mastercard-curved-32px.png"
+											alt="MasterCard"></li>
+									<li><img src="https://www.uxfordev.com/demo/1.0.6/assets/images/payment-icon-set/icons/maestro-curved-32px.png"
+											alt="Maestro"></li>
+									<li><img src="https://www.uxfordev.com/demo/1.0.6/assets/images/payment-icon-set/icons/american-express-curved-32px.png"
+											alt="American Express"></li>
+								</ul>
+							</div>
+						</div>
+						<form id="billing" class="form-horizontal" method="post" action="#" role="form"
+							[formGroup]="paiementForm" (ngSubmit)="onSubmit()">
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Nom complet</label>
+								<div class="col-sm-9">
+									<input type="text" class="form-control" placeholder="votre nom"
+										formControlName="nom"
+										[ngClass]="{'is-invalid': submitted  && paiementForm.controls['nom'].errors }">
+									<div *ngIf="submitted && paiementForm.controls['nom'].errors" class="text-danger">
+										<div *ngIf="paiementForm.controls['nom'].errors['required']">Entrez
+											votre
+											nom</div>
+										<div *ngIf="paiementForm.controls['nom'].errors['minlength']">Entrez comme c'est sur la carte</div>
+									</div>
+									<!-- <p class="help-block">Comme c'est sur la carte</p> -->
+								</div>
+							</div>
+
+
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Montant</label>
+								<div class="col-sm-9">
+									<input type="text" class="form-control" placeholder="votre nom"
+										formControlName="montant transaction"
+										[ngClass]="{'is-invalid': submitted  && paiementForm.controls['montant'].errors }">
+									<div *ngIf="submitted && paiementForm.controls['montant'].errors" class="text-danger">
+										<div *ngIf="paiementForm.controls['montant'].errors['required']">Entrez
+											votre
+											nom</div>
+										<div *ngIf="paiementForm.controls['montant'].errors['maxlength']">Entrez le montant de votre transaction</div>
+									</div>
+									<!-- <p class="help-block">Comme c'est sur la carte</p> -->
+								</div>
+							</div>
+
+
+							<div class="form-group">
+								<label class="col-sm-3 control-label">libelle</label>
+								<div class="col-sm-9">
+									<input type="text" class="form-control" placeholder="libelle de la transaction"
+										formControlName="libelle"
+										[ngClass]="{'is-invalid': submitted  && paiementForm.controls['libelle'].errors }">
+									<div *ngIf="submitted && paiementForm.controls['libelle'].errors" class="text-danger">
+										<div *ngIf="paiementForm.controls['libelle'].errors['required']">Entrez
+											votre
+											nom</div>
+										<div *ngIf="paiementForm.controls['libelle'].errors['minlength']">Entrez comme c'est sur la carte</div>
+									</div>
+									<!-- <p class="help-block">Comme c'est sur la carte</p> -->
+								</div>
+							</div>
+
+
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Numéro Carte </label>
+								<div class="col-sm-9">
+									<input type="text" class="form-control" placeholder="••••  ••••  ••••  ••••"
+										formControlName="numero"
+										[ngClass]="{'is-invalid': submitted  && paiementForm.controls['numero'].errors }">
+									<div *ngIf="submitted && paiementForm.controls['numero'].errors"
+										class="text-danger">
+										<div *ngIf="paiementForm.controls['numero'].errors['required']">Entrez
+											le numero de votre carte de crédit</div>
+										<div *ngIf="paiementForm.controls['numero'].errors['pattern']">Entrez un numero
+											valide
+										</div>
+										<div *ngIf="paiementForm.controls['numero'].errors['minlength']">Entrez
+											16caractères</div>
+									</div>
+									<!-- <p class="help-block">Les 16 chiffres au recto de votre carte de crédit.</p> -->
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Date d'expiration</label>
+								<div class="col-sm-9 form-inline">
+									<select class="form-control" formControlName="date"
+									[ngClass]="{'is-invalid': submitted  && paiementForm.controls['date'].errors }">
+										<option value="01">01</option>
+										<option value="01">02</option>
+										<option value="01">03</option>
+										<option value="01">04</option>
+										<option value="01">05</option>
+										<option value="01">06</option>
+										<option value="01">07</option>
+										<option value="01">08</option>
+									</select>
+									<div *ngIf="submitted && paiementForm.controls['date'].errors"
+                                        class="text-danger">
+                                        <div *ngIf="paiementForm.controls['date'].errors['required']">Entrez
+                                            mois correspondent à l'expiration</div>
+                                    </div>
+									<span class="divider">/</span>
+									<select class="form-control" formControlName="date1"
+									[ngClass]="{'is-invalid': submitted  && paiementForm.controls['date1'].errors }">
+										<option value="01">2015</option>
+										<option value="01">2016</option>
+										<option value="01">2017</option>
+										<option value="01">2018</option>
+										<option value="01">2019</option>
+										<option value="01">2020</option>
+										<option value="01">2021</option>
+										<option value="01">2022</option>
+									</select>
+									<div *ngIf="submitted && paiementForm.controls['date1'].errors"
+                                        class="text-danger">
+                                        <div *ngIf="paiementForm.controls['date1'].errors['required']">La date d'expiration de votre carte de crédit. Trouvez-le sur
+											le devant de votre carte de crédit</div>
+                                    </div>
+									<!-- <p class="help-block">La date d'expiration de votre carte de crédit. Trouvez-le sur
+										le devant de votre carte de crédit.</p> -->
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Code securité</label>
+								<div class="col-sm-9">
+									<input type="text" class="form-control" style="width: 120px;" placeholder="CVC" formControlName="cvc"
+									[ngClass]="{'is-invalid': submitted  && paiementForm.controls['cvc'].errors }">
+									<div *ngIf="submitted && paiementForm.controls['cvc'].errors"
+										class="text-danger">
+										<div *ngIf="paiementForm.controls['cvc'].errors['required']">Entrez
+											le code de sécurite de votre carte</div>
+										<div *ngIf="paiementForm.controls['cvc'].errors['pattern']">Entrez un code
+											valide
+										</div>
+										<div *ngIf="paiementForm.controls['cvc'].errors['minlength']">Entrez
+											3 chiffres  affichés au dos de votre carte de
+											crédit.</div>
+									</div>
+									<!-- <p class="help-block">Les 3 derniers chiffres affichés au dos de votre carte de
+										crédit.</p> -->
+								</div>
+							</div>
+							<hr>
+							<div class="action-wrapper text-center">
+								<!-- <h4 class="notes margin-bottom-sm">
+        								You'll be charged <span class="text-stronger">$99/year</span> 
+        							</h4> -->
+								<div class="action-btn">
+										<button class="btn btn-light btn-sm btn-icon-text" routerLink="/dashboard-nav"><i style="color: white;" class="bi bi-x"></i>
+											<span class="text" style="color: white;">Cancel</span></button>
+									<button class="btn btn-success btn-lg">
+										Lancer paiement
+										<i class="fa fa-chevron-right"></i>
+									</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+</div>
+
+
+
+

@@ -23,6 +23,8 @@ import {MatListModule} from "@angular/material/list";
 import { MaterialModule } from './material/material.module';
 import { SolvabiliteComponent } from './comptabilite/solvabilite/solvabilite.component';
 import { ListePaiementComponent } from './comptabilite/liste-paiement/liste-paiement.component';
+import { CandidatComponent } from './concours/candidat/candidat.component';
+import { PaiementComponent } from './concours/paiement/paiement.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +35,8 @@ import { ListePaiementComponent } from './comptabilite/liste-paiement/liste-paie
     LoginComponent,
     SolvabiliteComponent,
     ListePaiementComponent,
+    CandidatComponent,
+    PaiementComponent,
   ],
   imports: [
     BrowserModule,
