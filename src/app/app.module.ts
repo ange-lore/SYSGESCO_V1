@@ -26,6 +26,8 @@ import { ListePaiementComponent } from './comptabilite/liste-paiement/liste-paie
 import { CandidatComponent } from './concours/candidat/candidat.component';
 import { PaiementComponent } from './concours/paiement/paiement.component';
 import { ResultatComponent } from './concours/resultat/resultat.component';
+import { RecaptchaComponent } from './concours/recaptcha/recaptcha.component';
+import {RecaptchaCommonModule} from "ng-recaptcha/lib/recaptcha-common.module";
 
 @NgModule({
   declarations: [
@@ -39,6 +41,7 @@ import { ResultatComponent } from './concours/resultat/resultat.component';
     CandidatComponent,
     PaiementComponent,
     ResultatComponent,
+    //RecaptchaComponent,
   ],
   imports: [
     BrowserModule,
@@ -63,9 +66,10 @@ import { ResultatComponent } from './concours/resultat/resultat.component';
     MatMenuModule,
     AppRoutingModule,
     MatIconModule,
-    // RecaptchaModule,
+    //RecaptchaModule,
     HttpClientModule,
-    MaterialModule
+    MaterialModule,
+    RecaptchaCommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
