@@ -4,24 +4,45 @@
 	box-sizing: border-box;
 }
 
+::placeholder{
+	font-size: 1rem}
+
+	input.form-control{
+		width: 240px;
+		height: 40px;
+		background-color: #eee;
+	}
+/* ==========================GESTION ICON ==================================== */
 
 
+.form-group input {
+	outline: none;
+	margin: 8px 0;
 
-/* ===================designe de l'erreur ========================= */
-div.text-danger{
-	font-size: 1.2rem;
-	/* background-color: rgb(246, 180, 180); */
-	margin-top: -8.5px;
-	border-radius: 2px;
 }
 
-input.form-control{
-  width: 240px;
-  height: 40px;
-  background-color: #eee;
+.eye{
+	position: absolute;
 }
-/* =============================== fin ========================== */
 
+div.icon {
+	margin-top: 5rem;
+}
+
+.eye{
+	position: absolute;
+}
+.form-group i.bi.bi-envelope{
+	margin-top: 200px;
+}
+
+i {
+	padding: 7rem;
+	color: #ccc;
+	margin-right: 10px;
+}
+
+/* ======================================= FIN =============================== */
 h1 {
 	font-weight: bold;
 	margin: 0;
@@ -41,6 +62,7 @@ p {
 
 span {
 	font-size: 12px;
+	margin-bottom: 20px;
 }
 
 a {
@@ -90,13 +112,17 @@ form {
 input {
 	background-color: #eee;
 	border: none;
-	padding: 2rem 25px;
+	padding: 12px 15px;
 	margin: 8px 0;
-	/* width: 100%; */
+	width: 100%;
 }
 
+/* input.form-controlng-invalid {
+	background-color: #ced4da;
+} */
+
 .container {
-	background-color: #fff;
+	background-color: #ced4da;
 	border-radius: 10px;
   	box-shadow: 0 14px 28px rgba(0,0,0,0.25),
 			0 10px 10px rgba(0,0,0,0.22);

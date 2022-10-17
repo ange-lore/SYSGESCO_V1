@@ -218,7 +218,7 @@ article.filiere img{
   display: flex;
   text-align: center;
   gap: 1.4rem;
-  height: fit-content;
+  /* height: fit-content; */
   background: white;
   cursor: pointer;
 
@@ -251,14 +251,14 @@ article.filiere img{
   font-size: 1.2rem;
 }
 
-.info p {
+/*.info p {
   margin-top: 0.8rem;
   display: none;
-}
+}*/
 
-.info.open p {
+/* .info.open p {
   display: block;
-}
+} */
 
 .info img {
   height: 1rem;

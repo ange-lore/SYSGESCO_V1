@@ -19,9 +19,10 @@
         <i class="bi bi-camera-video"></i>
         <h3>Vidéo conférence</h3>
       </a>
+
       <a class="dropdown" mat-list-item>
-        <i class="bi bi-credit-card-2-back"></i>
-        <h3>Comptabilité</h3>
+        <h3 class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+        aria-expanded="false"><i class="bi bi-credit-card-2-back"></i>Comptabilité</h3>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
           <a class="dropdown-item" mat-list-item routerLink="liste-paiement">
             <i class="bi bi-list-check"></i>
@@ -37,15 +38,16 @@
           </a>
         </div>
       </a>
-      <div class="dropdown">
+      <!-- <div class="dropdown">
         <a class="nav-link dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-expanded="false">
           <i class="bi bi-credit-card-2-back">
           </i>Comptabilité</a>
-      </div>
-      <div class="dropdown">
-        <button class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" class="dropbtn"><i class="bi bi-easel2"></i>Scolarité</button>
+      </div> -->
+      <a class="dropdown" mat-list-item>
+        <h3 class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+        aria-expanded="false"><i class="bi bi-easel2"></i>Scolarité</h3>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a mat-list-item routerLink="concours">
+          <a class="dropdown-item" mat-list-item routerLink="concours">
             <i class="bi bi-pencil-square"></i>
             <h3>Concours</h3>
           </a>
@@ -70,14 +72,14 @@
             <h3>Certificat</h3>
           </a>
         </div>
-      </div> <br>
+      </a>
       <!-- <button routerLink="admin-settings">scolarite-setting</button> -->
 
       <!--+++++++++++++++++++++++++++++++++++++++++++++++++ COMPTABILITE  +++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
 
-      <div class="dropdown">
-
-        <button class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" class="dropbtn"><i class="bi bi-person-circle"></i>REP</button>
+      <a class="dropdown" mat-list-item>
+        <h3 class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+        aria-expanded="false"><i class="bi bi-person-circle"></i>REP</h3>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
           <a class="dropdown-item" mat-list-item [routerLink]="['/Liste']">
             <i class="bi bi-person-bounding-box"></i>
@@ -96,7 +98,7 @@
             <h3>Statistique</h3>
           </a>
         </div>
-      </div>
+      </a>
       <a mat-list-item [routerLink]="['']">
         <img src="/assets/image/logout.png" alt="">
         <h3>Déconnection</h3>

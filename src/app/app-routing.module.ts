@@ -14,6 +14,7 @@ import { CandidatComponent } from './concours/candidat/candidat.component';
 import { ResultatComponent } from './concours/resultat/resultat.component';
 
 
+
 const routes: Routes = [
   {path: '', component: MainComponent, pathMatch: 'full'},
   {path: 'registration', component: RegistrationComponent},
@@ -22,7 +23,6 @@ const routes: Routes = [
   {path: 'paiement', component: PaiementComponent},
   {path: 'candidat', component: CandidatComponent},
   {path: 'resultat', component: ResultatComponent},
-  {path: 'recaptcha', component: RecaptchaComponent},
   {path: 'dashboard-nav', component: NavComponent,
     children: [
       {path: '', redirectTo: '/dashboard-nav', pathMatch: 'full'},
