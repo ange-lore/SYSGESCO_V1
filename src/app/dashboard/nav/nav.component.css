@@ -5,7 +5,7 @@
 
 .sidenav {
   width: 200px;
-  background-color: #eee;
+  background-color: rgb(218, 216, 216);
   border-color: black;
 }
 
@@ -70,13 +70,13 @@ a h3{
 .dropbtn {
   padding: 11px 150px 11px 17px;
   border: none;
-  background-color:#f1f1f1;
+  background-color: rgb(218, 216, 216);
 }
 
 .dropdown {
   position: relative;
   display: inline-block;
-  background-color: #eee;
+  background-color:  rgb(218, 216, 216);
 }
 
 .dropdown-content {
@@ -111,11 +111,6 @@ a h3{
 img{
   height: 1.5rem;
 }
-
-.drop{
-  background-color:#f1f1f1;
-}
-
 
 
 button.dropbtn {

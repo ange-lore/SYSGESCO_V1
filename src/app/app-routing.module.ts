@@ -20,9 +20,6 @@ const routes: Routes = [
   {path: 'registration', component: RegistrationComponent},
   // {path: '', redirectTo: '/registration', pathMatch: 'full'},
   {path: 'login', component: LoginComponent},
-  {path: 'paiement', component: PaiementComponent},
-  {path: 'candidat', component: CandidatComponent},
-  {path: 'resultat', component: ResultatComponent},
   {path: 'dashboard-nav', component: NavComponent,
     children: [
       {path: '', redirectTo: '/dashboard-nav', pathMatch: 'full'},
@@ -35,7 +32,11 @@ const routes: Routes = [
       {path: 'video-conference', title: 'Video Component',  component: VideoConferenceComponent},
       { path: 'dashboard-nav', loadChildren: () => import ('./dashboard/dashboard.module').then(m => m.DashboardModule)},
     ]
-  }
+  },
+  
+  {path: 'paiement', component: PaiementComponent},
+  {path: 'candidat', component: CandidatComponent},
+  {path: 'resultat', component: ResultatComponent},
 ];
 
 @NgModule({

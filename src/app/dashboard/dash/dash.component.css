@@ -201,3 +201,6 @@ div.row.row-cols-1.col.card{
 div.col.card.radius-10.border-start.border-0.border-3border-danger{
     margin-left: -220px;
 }
+p.mb-0{
+    font-size: 0.85rem;
+}
